@@ -2,7 +2,7 @@
 # Build script for ARM64 kernel with Clang
 
 # Basic configuration
-#CORES=$(nproc)
+CORES=$(( $(nproc --all) - 2 ))
 KERNEL_ROOT=$(pwd)
 ARCH="arm64"
 DEFCONFIG="clover_defconfig"
